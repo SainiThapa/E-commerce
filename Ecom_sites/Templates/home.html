@@ -1,5 +1,4 @@
 {% load static %}
-{% static "img" as baseUrl %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
 </head>
-{% block content %}
 <body>
     <h1>Hello world</h1>
-    <a href=""><img href="{{baseUrl}}/{{dests.img}}" alt="Home" width="300px"></a> <br>
+    <a href="Index"><img src="{%static 'images/Picture.jpg' %}" alt="Home" width="300"></a> <br>
     <form action="Index">
         <input type="submit" value="Index" style="font-size:20px;">
     </form>
 </body>
-{% endblock %}
 </html>
