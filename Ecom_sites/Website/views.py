@@ -12,3 +12,5 @@ def hello(request):
     return render(request,"home.html")
 def Index(request):
     return render(request,'Index.html')
+def contact(request):
+    return render(request,'Contact.html')
