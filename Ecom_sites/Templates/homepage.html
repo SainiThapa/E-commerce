@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +8,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
 </head>
+{%block content%}
 <body>
-    <h1>YG Entertainment Store</h1>
-    <img src="{% static 'images/download.png' %}" alt="">
-   <h3>
-       <nav>
-           <ul>
-               <a href="Index"><li>Home</li></a>
-               <a href="contact"><li>Contact Us</li></a>
-               <li>Products</li>
-               <li>About</li>
-            </ul>
-        </nav>
-    </h3> 
-    
+    <a href="home"><img src="{%static 'images/logo.png'%}" alt=""></a>
+	<div class="destinations" id="destinations">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title"><h2>Popular products</h2></div>
+				</div>
+			</div>
+			<div class="row destinations_row">
+				<div class="col">
+					<div class="destinations_container item_grid">
+
+						<!-- Running a loop for dynamic number of data -->
+						{%for dest in dests%}
+						<!-- Destination -->
+						<div class="destination item">
+							<div class="destination_image">
+								<img src="{{dest.img}}" alt="" height="260px" width="500px">
+								{%if dest.offer %}
+								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+								{% endif %}
+							</div>
+							<div class="destination_content">
+								<div class="destination_subtitle"><p>{{dest.name}}</p></div>
+								<div class="destination_price">NRs. {{dest.price}}</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    {%endblock%}
 </body>
 </html>
