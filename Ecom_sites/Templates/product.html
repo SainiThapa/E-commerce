@@ -28,11 +28,15 @@
             </nav>
         </div>
     </div>
-    <p><img src="{%static 'images/WINNER2.jpg'%}" alt="EXITE" width="300px"><br>
+    {%for dest in dests%}
+
+    <p><img src="{{dest.img.url}}" width="300px"><br>
     </p> <br>
     <p><div class="Detail">Album : {{dest.name}}<br>
-        Price : NRs.{{dest.price}}</div>
-
+        Price : NRs.{{dest.price}}<br> <div style="font-size: 12px;">{{dest.desc}}</div></div>
+       
+        
+    {%endfor%}
     
     {%endblock%}
 </body>
