@@ -9,12 +9,11 @@
 <body>
     <form action="Login" method="post">
         {% csrf_token %}
-        <label for="email">Email Address</label><br>
+        <h1><label for="email">Email Address</label><br>
         <input type="email" name="Email" placeholder="Email"> <br>
         <label for="password1">Password</label><br>
         <input type="password" name="password1" placeholder="password"> <br>
-        <input type="submit" value="Log In">
-    </form>
-    
+        <input type="submit" value="Log In"></h1>
+    </form>    
 </body>
 </html>
