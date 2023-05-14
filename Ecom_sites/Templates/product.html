@@ -13,6 +13,7 @@
     </head>
     <body>
         {% block content %}
+        <div class="main">
     <div class="Header">
         <div class="nav">
             <nav class="myNav">
@@ -29,15 +30,15 @@
         </div>
     </div>
     {%for dest in dests%}
-
-    <p><img src="{{dest.img.url}}" height="300px"><br>
-    </p>
-    <p><div class="Detail">Album : {{dest.name}}<br>
-        Price : NRs.{{dest.price}}<br> <div style="font-size: 12px;">{{dest.desc}}</div></div>
-       
-        
+    <div class="gallery">
+        <a target="_blank" href="{{dest.img.url}}">
+        <img src="{{dest.img.url}}" height="300px"></a>
+        <div class="desc">Album : {{dest.name}} <br>
+            Price : NRs.{{dest.price}} <br>{{dest.desc}}
+        </div>
+    </div>
     {%endfor%}
-    
+</div>
     {%endblock%}
 </body>
 </html>
