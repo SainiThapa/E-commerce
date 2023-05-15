@@ -20,11 +20,11 @@ box-shadow: 4px 3px;
 border: 1px solid #777;
 }
 .gallery img{
-width: 230px;
+width: 100%;
 object-fit: cover;
 height: 230px;
 }
 .desc {
-padding: 15px;
+    font-size: small;
 text-align: center;
 }

@@ -8,32 +8,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Products</title>
         <link rel="stylesheet" href="{%static 'css/home.css'%}">
-        <link rel="stylesheet" href="{%static 'css/product.css'%}">
+        <!-- <link rel="stylesheet" href="{%static 'css/product.css'%}"> -->
         <script src="https://kit.fontawesome.com/071ff2c21e.js" crossorigin="anonymous"></script>
     </head>
     <body>
         {% block content %}
-        <div class="main">
-    <div class="Header">
-        <div class="nav">
-            <nav class="myNav">
-                <img src="{%static 'images/logo.png' %}" class="logo">
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="product">Products</a></li>
-                    <li><a href="#">Login/Sign Up</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="#">My Cart<i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-            </nav>
+        <div class="Header">
+            <div class="nav">
+                <nav class="myNav">
+                    <img src="{%static 'images/logo.png' %}" class="logo">
+                    <ul>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="product">Products</a></li>
+                        <li><a href="accounts/LoginOrSignup">Login/Sign Up</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        <li><a href="#">My Cart<i class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
+<div class="main">
     {%for dest in dests%}
     <div class="gallery">
-        <a target="_blank" href="{{dest.img.url}}">
+        <a target="_blank" href="buy">
         <img src="{{dest.img.url}}" height="300px"></a>
-        <div class="desc">Album : {{dest.name}} <br>
+        <div class="desc">Product Name: <br>{{dest.name}} <br>
             Price : NRs.{{dest.price}} <br>{{dest.desc}}
         </div>
     </div>
