@@ -17,3 +17,5 @@ def contact(request):
     return render(request,'Contact.html')
 def index(request):
     return render(request,"homepage.html")
+def buy(request):
+    return render(request,"Buy.html")
