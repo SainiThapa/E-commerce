@@ -5,26 +5,37 @@
     padding: 3px 4%;
 }
 
-.main{
-    margin: 20px;
-    padding: 50px;
+.container{
+    padding: 10px 10%;
     }
+.services{
+    padding: 50px 0;
+}
 .gallery {
-margin: 10px;
-border: 1px solid #ccc;
-float: left;
-width: 180px;
-box-shadow: 4px 3px;
+margin-top: 10%;
+border-radius: 10px;
+position:relative;
+overflow: hidden;
+border: 1px solid #222;
+float:right;
+background-color: paleturquoise;
+width: 50%;
+box-shadow: 2px 2px;
+}
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+    object-fit: cover;
+    transition: transform 0.5s;
 }
 .gallery:hover{
 border: 1px solid #777;
 }
-.gallery img{
-width: 100%;
-object-fit: cover;
-height: 230px;
+.gallery a{
+    display:contents;
 }
 .desc {
-    font-size: small;
+font-size: small;
 text-align: center;
 }
