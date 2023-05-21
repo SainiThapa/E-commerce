@@ -19,3 +19,5 @@ def index(request):
     return render(request,"homepage.html")
 def buy(request):
     return render(request,"Buy.html")
+def categories(request):
+    return render(request,"categories.html")

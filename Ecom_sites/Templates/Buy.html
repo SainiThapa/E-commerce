@@ -28,10 +28,12 @@
     </div>
 </div>
 <div>
+    <!-- {%for dest in dests%} -->
 <img src="{{dest.img.url}}" height="300px"><br>
 Album : {{dest.name}} <br>
     Price : NRs.{{dest.price}} <br>{{dest.desc}}
 </div>
+<!-- {%endfor%} -->
 {%endblock%}
 </body>
 </html>
