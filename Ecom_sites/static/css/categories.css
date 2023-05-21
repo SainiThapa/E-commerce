@@ -1,0 +1,35 @@
+.items{
+    padding: 5% 8%;
+}
+.albums{
+    border-radius: 10%;
+    position:relative;
+    overflow: hidden;
+    background-color: #aababb;
+    margin-left: 30px;
+    float:left;
+    width: 30%;
+}
+.albums img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display:block;
+    object-fit: cover;
+    height: 425px;
+    transition: transform 0.5s;
+}
+.albums:hover{
+/* border: 2px solid #777; */
+background-color:turquoise;
+transform: translateY(-10px); 
+}
+.albums a{
+    display: contents;
+}
+.albums a div{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+}

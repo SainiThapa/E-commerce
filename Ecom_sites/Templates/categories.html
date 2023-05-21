@@ -9,6 +9,7 @@
         <title>Products</title>
         <link rel="stylesheet" href="{%static 'css/home.css'%}">
         <link rel="stylesheet" href="{%static 'css/product.css'%}">
+        <link rel="stylesheet" href="{%static 'css/categories.css'%}">
         <script src="https://kit.fontawesome.com/071ff2c21e.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -28,22 +29,26 @@
                 </nav>
             </div>
         </div>
-<div class="services">
-    <div class="container">
-        {%for dest in dests%}
-        <div class="gallery">
-            <div name="content">
-
-                <a target="_blank" href="{{dest.img.url}}">
-                    <img src="{{dest.img.url}}" height="300px">
-                    <div class="description"><b><div class="name">{{dest.name}}</div></b>
-                    Price : NRs.{{dest.price}}<div class="desc">({{dest.desc}})</div>
-                </div></a>
+        <div class="items">
+            <div class="albums">
+                <a href="#">
+                    <img src="{%static 'images/albums_img.jpg'%}">
+                    <div>Albums</div>
+                </a>
+            </div>
+           <div class="albums">
+                <a href="#">
+                    <img src="{%static 'images/Lightsticks_img.jpg'%}">
+                    <div>Lightsticks</div>
+                </a>
+            </div>
+           <div class="albums">
+                <a href="#">
+                    <img src="{%static 'images/Merch_img.jpg'%}">
+                    <div>Fashion and Merch</div>
+                </a>
             </div>
         </div>
-        {%endfor%}
-    </div>
-</div>
-{%endblock%}
-</body>
+        {%endblock%}
+    </body>
 </html>
