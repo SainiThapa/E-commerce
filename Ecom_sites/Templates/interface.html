@@ -1,17 +1,32 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/login.css'%}">
     <script src="https://kit.fontawesome.com/071ff2c21e.js" crossorigin="anonymous"></script>
     <title>Sign Up/Login</title>
 </head>
 <body>
-    <p style="padding-left: 30px;"><h1>Already have an Account?</h1><br>
-    <h3><a href="login">Click Here</a></h3><br><br>
-    <h1>Not a registered user?</h2><br>
-    <h3><a href="register">Click Here</a></h3><br><br>
-    <h3><button style="width:100px; height:50px;" onclick="window.location.href='/';">Return To HomePage</button></h3></p>    
+    <div class="login">
+        <a href="login">
+        <div class="box">
+            <h1>Already have an Account?</h1><br>
+            <h2>Click Here</h2>
+        </div></a>
+    </div>
+    <div class="login">
+        <a href="register">
+        <div class="box">
+            <h1>Not a registered user?</h2><br>
+            <h2>Click Here</h2>
+            </div></a>
+    </div>
+    <div class="button1">
+        <button style="width:400px; height:50px;" onclick="window.location.href='/';">
+            Return To HomePage</button>
+    </div>
 </body>
 </html>
