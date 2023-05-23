@@ -17,7 +17,7 @@
     display:block;
     object-fit: cover;
     height: 425px;
-    transition: transform 0.5s;
+    transition: 0.5s;
 }
 .albums:hover{
 /* border: 2px solid #777; */
