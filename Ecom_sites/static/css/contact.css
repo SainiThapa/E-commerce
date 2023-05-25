@@ -3,11 +3,22 @@
     font-family: sans-serif;
 }
 h1{
-    padding-left: 10px;
-
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
 }
-h5{
+.body{
+    padding-left: 10%;
     position: relative;
-    padding: 10px;
-    font-size: 20px;
+    float: right;
+}
+.header{
+    padding: 10% 10px;
+}
+
+.content h5{
+    font-size: 30px;
+}
+
+.content a{
+    display: contents;
 }

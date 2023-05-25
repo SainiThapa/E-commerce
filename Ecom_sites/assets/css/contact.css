@@ -2,12 +2,20 @@
     background-color: #badcee;
     font-family: sans-serif;
 }
-h1{
-    padding-left: 10px;
-
-}
-h5{
+.body{
+    padding-left: 30%;
     position: relative;
-    padding: 10px;
+    float: left;
+}
+/* .header{
+    padding: 10% 10px;
+}
+
+.content{
+    display:inline;
     font-size: 20px;
 }
+
+.content a{
+    display: contents;
+} */
