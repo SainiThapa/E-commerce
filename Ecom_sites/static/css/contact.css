@@ -2,23 +2,25 @@
     background-color: #badcee;
     font-family: sans-serif;
 }
+img{
+    width: 200px;
+}
 h1{
-    font-size: 30px;
+    font-size: 40px;
     font-family:'Times New Roman', Times, serif;
 }
 .body{
-    padding-left: 10%;
+    padding-left: 3%;
     position: relative;
     float: right;
 }
 .header{
-    padding: 10% 10px;
+    padding: 5% 5px;
 }
 
 .content h5{
-    font-size: 30px;
+    font-size: 25px;
 }
-
 .content a{
     display: contents;
 }

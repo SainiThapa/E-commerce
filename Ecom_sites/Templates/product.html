@@ -31,15 +31,15 @@
 <div class="services">
     <div class="container">
         {%for dest in dests%}
+        <a target="_blank" href="{{dest.img.url}}">
         <div class="gallery">
-            <a target="_blank" href="{{dest.img.url}}">
             <div name="content">
                     <img src="{{dest.img.url}}" height="300px">
                     <div class="description"><b><div class="name">{{dest.name}}</div></b>
                     Price : NRs.{{dest.price}}<div class="desc">({{dest.desc}})</div>
                 </div>
+            </div>
             </div></a>
-        </div>
         {%endfor%}
     </div>
 </div>
