@@ -6,7 +6,10 @@
 }
 .container{
     padding: 10px 12%;
-    }
+}
+.container a{
+    display:contents;
+}
 .gallery {
     padding: 10px 5%;
 border-radius: 10px;
@@ -19,6 +22,7 @@ width: 50%;
 height: 425px;
 box-shadow: 2px 2px;
 margin-bottom:30px;
+transition: transform 0.5s;
 }
 .gallery img{
     text-align: center;
@@ -26,16 +30,12 @@ margin-bottom:30px;
     border-radius:10px;
     display:block;
     object-fit: cover;
-    transition: transform 0.5s;
     margin-bottom: 10px;
 }
 .gallery:hover{
 /* border: 2px solid #777; */
 background-color:peachpuff;
 transform: translateY(-10px); 
-}
-.gallery a{
-    display:contents;
 }
 .gallery.name{
     font-style: oblique;

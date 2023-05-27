@@ -3,14 +3,15 @@
     font-family: sans-serif;
 }
 img{
-    width: 200px;
+    width: 400px;
+    position: absolute;
 }
 h1{
     font-size: 40px;
     font-family:'Times New Roman', Times, serif;
 }
 .body{
-    padding-left: 3%;
+    /* padding-left: 3%; */
     position: relative;
     float: right;
 }
