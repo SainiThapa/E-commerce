@@ -16,7 +16,8 @@ def singleProduct(request, name=None):
     data = Destination.objects.get(name=name)
     return render(request, "product_detail.html",{"data":data})
 
-
+def payment(request):
+    return render(request,'payment.html')
 
 def contact(request):
     return render(request,'Contact.html')

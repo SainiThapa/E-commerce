@@ -1,29 +1,62 @@
 .block{
-    padding: 3% 10%;
+    padding: 3% 15%;
+}
+.gallery{
+    width: 1000px;
+    height: auto;
+    box-shadow: 2px 6px grey;
+    background-color: rgba(243, 211, 172, 0.837);
+}
+.content{
+    padding: 5% 5%;
 }
 img{
     width:400px;
     height: auto;
     position: relative;
 }
-.gallery{
-    width: 1200px;
-    height: auto;
-    box-shadow: 2px 6px grey;
-    background-color: whitesmoke;
-}
-.content{
-    padding: 5% 5%;;
-}
 .description{
     color:black;
     font-size: 25px;
-    float: right;
-    margin:0 5%;
+    /* float: right; */
+    position: relative;
+    width:500px;
+
+}
+.name{
+    font-family: 'Lucida Sans';
+}
+.price{
+    font-size: 22px;
+    margin: 10px 0px;
 }
 .desc{
     margin-top: 10px;
-    margin-right: 15%;
+    margin-right: 10%;
     font-size: 18px;
     color: gray;
+}
+.buy{
+    position: absolute;
+    padding-left: 40%;
+    margin-top: -25%;
+}
+.buynow{
+    font-size: 30px;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    background-color: orangered;
+    border: 1px solid black;
+    margin-top: 20%;
+    padding: 5%;
+    transition:0.5s;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.buy a{
+    display: contents;
+    color:black;
+}
+.buynow:hover{
+    transform: translateY(10px);
 }
