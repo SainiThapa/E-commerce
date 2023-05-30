@@ -27,14 +27,20 @@
         </div>
     </div>
     {% block content %}
-    <div class="gallery">
-        <div class="content">
+    <div class="block">
+        <div class="gallery">
+            <div class="content">
                 <img src="{{data.img.url}}" height="300px">
-                <div class="description"><b><div class="name">{{data.name}}</div></b>
+                <div class="description">
+                    <b><div class="name">{{data.name}}</div></b>
                 Price : NRs.{{data.price}}<div class="desc">({{data.desc}})</div>
             </div>
+            <div class="buy">
+
+            </div>
         </div>
-        </div>
+    </div>
+</div>
     {%endblock%}
 </body>
 </html>
