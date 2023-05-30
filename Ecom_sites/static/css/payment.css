@@ -1,0 +1,48 @@
+*{
+    background-color: azure;
+}
+.header{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 40px;
+}
+.box{
+    margin: 5% 32% ;
+}
+img{
+    width: 250px;
+    /* float: left; */
+}
+.logo{
+    font-size: 30px;
+    text-align: center;
+    float: left;
+    transition: 0.5s;
+    color: black;
+
+}
+.logo a{
+    display:contents;
+}
+.logo:hover{
+    transform: translateY(-5px);
+}
+.home{
+    position: absolute;
+    margin:25% 38%;
+    color: black;
+    background-color: #08f2bb;
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    height:30px;
+    border: 1px solid grey;
+    border-radius: 5%;
+    transition: 0.5s;
+}
+.homebutton a{
+    display: contents;
+}
+.home:hover{
+    transform: translateY(-5px);
+}
