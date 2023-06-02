@@ -29,13 +29,13 @@ img{
 }
 .home{
     position: absolute;
-    margin:25% 38%;
+    margin:25% 41%;
     color: black;
     background-color: #08f2bb;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
-    width: 150px;
-    height:30px;
+    width: 200px;
+    height:35px;
     border: 1px solid grey;
     border-radius: 5%;
     transition: 0.5s;

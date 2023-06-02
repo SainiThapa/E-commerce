@@ -20,10 +20,10 @@
             {% csrf_token %}
             <div class="text">Log in to K-Merch Nepal</div>
                 <div class="Title">
-                    <label for="email">Enter your Email Address</label>
+                    <label for="username">Enter your Username</label>
                 </div>
                 <div>
-                    <input type="email" name="Email" placeholder="Email">
+                    <input type="text" name="username" placeholder="Username">
                 </div>
                 <div class="Title">
                     <label for="password1">Enter your Password</label>
@@ -41,6 +41,9 @@
                 or
                 <a href="register"><div class="button">Create new account</div></a>
             </form>
+            {%for message in messages%}
+            <h3>{{message}}</h3>
+            {%endfor%}
         </div>
 </body>
 </html>
