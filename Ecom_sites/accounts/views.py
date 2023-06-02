@@ -7,8 +7,8 @@ def decide(request):
     return render(request,"interface.html")
 def register(request):
     if request.method=='POST':
-        firstname=request.POST.get('firstname',"default value")
-        lastname=request.POST.get('lastname','default value')
+        first_name=request.POST.get('firstname',"default value")
+        last_name=request.POST.get('lastname','default value')
         username=request.POST.get('username','default value')
         email=request.POST.get('email','default value')
         password1=request.POST.get('password1','default value')
@@ -22,7 +22,7 @@ def register(request):
                 messages.info(request,'Email already in use')
                 return redirect('register')
             else:
-                            user=User.objects.create_user(username=username,password=password1, email=email,firstname=firstname,lastname=lastname)
+                            user=User.objects.create_user(username=username,password=password1, email=email,first_name=first_name,last_name=last_name)
                             user.save()
                             print('USER CREATED !')
                             return redirect('login')
@@ -34,10 +34,10 @@ def register(request):
 
 def login(request):
     if request.method=='POST':
-        email=request.POST['email']
-        password=request.POST['password1']
+        username=request.POST.get('username','default value')
+        password=request.POST.get('password1','default value')
 
-        user=auth.authenticate(email=email,password=password)
+        user=auth.authenticate(username=username,password=password)
 
         if user is not None:
             auth.login(request,user)

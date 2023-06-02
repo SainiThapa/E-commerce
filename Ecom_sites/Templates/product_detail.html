@@ -11,22 +11,29 @@
     <script src="https://kit.fontawesome.com/071ff2c21e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    {% block content %}
     <div class="Header">
         <div class="nav">
             <nav class="myNav">
                 <img src="{%static 'images/logo.png' %}" class="logo">
                 <ul>
+                    {% if user.is_authenticated %}
+                    <li>Hello,{{user.first_name}}</li>
+                    {% endif %}
                     <li><a href="/">Home</a></li>
                     <li><a href="/categories">Categories</a></li>
                     <li><a href="/product">Products</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="/accounts/logout">Logout</a></li>
+                    {% else %}
                     <li><a href="/accounts/LoginOrSignup">Login/Sign Up</a></li>
+                    {% endif %}
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="#">My Cart<i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
         </div>
     </div>
-    {% block content %}
     <div class="block">
         <div class="gallery">
             <div class="content">
@@ -36,14 +43,24 @@
                <div class="price">Price : NRs.{{data.price}}</div>
                 <div class="desc">({{data.desc}})</div>
                 </div>
+                {%if user.is_authenticated %}
                 <div class="buy">
-                    
-                       <a href="/paymentmethod"><div class="buynow">Buy Now
-                    </div></a>
-                    <a href="#"><div class="buynow">
-                        Add to cart <i class="fa-solid fa-cart-shopping"></i>
-                    </div></a>
-                </div>
+                       <a href="/paymentmethod">
+                           <div class="buynow">Buy Now
+                       </div></a>
+                       <a href="#"><div class="buynow">
+                           Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                       </div></a>
+                    </div>
+                    {% else %}
+                    <div class="buy">
+                        <a href="/accounts/LoginOrSignup"><div class="buynow">Buy Now
+                        </div></a>
+                        <a href="/accounts/LoginOrSignup"><div class="buynow">
+                            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                        </div></a>
+                    </div>
+                    {% endif %}
         </div>
     </div>
 </div>
