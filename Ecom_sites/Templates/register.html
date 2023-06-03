@@ -6,27 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="{%static 'css/product.css'%}">
+    <link rel="stylesheet" href="{%static 'css/register.css'%}">
 </head>
 <body>
-    <h1>New Account? Sign up now !!</h1>
-    <form action="register" method="POST">
-        {% csrf_token %}
-        <label for="First Name">First Name</label><br>
-        <input type="text" name="firstname" placeholder="First Name"> <br>
-        <label for="Last Name">Last Name</label><br>
-        <input type="text" name="lastname" placeholder="Last Name"> <br>
-        <label for="User Name">User Name</label><br>
-        <input type="text" name="username" placeholder="username"> <br>
-        <label for="email">Email Address</label><br>
-        <input type="email" name="email" placeholder="Email"> <br>
-        <label for="password1">Password</label><br>
-        <input type="password" name="password1" placeholder="password"> <br>
-        <label for="password2">Confirm your password</label><br>
-        <input type="password" name="password2" placeholder="Re-enter your password"> <br><br>
-        <input type="submit" value="Register">
-    </form>
-    <div>
+    <div class="box">
+        <h1>New Account? Sign up now !!</h1>
+        <div class="form">
+            <form action="register" method="POST">
+                {% csrf_token %}
+                <div class="label">
+                    <label for="First Name">First Name</label><br>
+                    <input type="text" name="firstname" placeholder="First Name"> <br>
+                </div>
+                <div class="label">
+                    <label for="Last Name">Last Name</label><br>
+                    <input type="text" name="lastname" placeholder="Last Name"> <br>
+                </div>
+                <div class="label">
+                    <label for="User Name">User Name</label><br>
+                    <input type="text" name="username" placeholder="Username"> <br>
+                </div>
+                
+                <div class="label">
+                    <label for="email">Email Address</label><br>
+                    <input type="email" name="email" placeholder="Email"> <br>
+                </div>
+                
+                <div class="label">
+                    <label for="password1">Password</label><br>
+                    <input type="password" name="password1" placeholder="Password"> <br>
+                </div>
+                <div class="label">
+                    <label for="password2">Confirm your password</label><br>
+                    <input type="password" name="password2" placeholder="Re-enter your password"> <br><br>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+        <div>
         {%for message in messages%}
         <h3>{{message}}</h3>
         {%endfor%}
