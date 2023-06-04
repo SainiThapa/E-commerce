@@ -1,14 +1,33 @@
-*{
+body{
     background-color: #08f2bb;
 }
+h1{
+    margin-left: 13%;
+    font-size: 35px;
+}
 .box{
-    margin: 15% 35%;
+    margin: 5% 32%;
 }
 .form{
-    /* padding: 4px 3px; */
-    background-color: white;
+    padding: 4px 3px;
+    background-color: rgb(249, 237, 228);
     border: 1px solid black;
+    box-shadow: 3px 2px grey;
+    transition: 0.5s;
+}
+.form:hover{
+    transform: translateY(-5px);
 }
 .label{
-    margin-left: 15%;
+    margin: 15px 20%;
+    font-size: 28px;
+}
+input{
+    margin-top: 5px;
+    font-size: 22px;
+}
+.submit{
+    margin-left: 38%;
+    margin-top: -15px;
+    margin-bottom: 15px;
 }
