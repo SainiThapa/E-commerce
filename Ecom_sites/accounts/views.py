@@ -14,21 +14,25 @@ def register(request):
         password1=request.POST.get('password1','default value')
         password2=request.POST.get('password2','default value')
         
-        if (password1==password2):
-            if User.objects.filter(username=username).exists():
-                messages.info(request,"Username already taken")
-                return redirect('register')
-            elif User.objects.filter(email=email).exists():
-                messages.info(request,'Email already in use')
-                return redirect('register')
-            else:
-                            user=User.objects.create_user(username=username,password=password1, email=email,first_name=first_name,last_name=last_name)
-                            user.save()
-                            print('USER CREATED !')
-                            return redirect('login')
-        else:
-            messages.info(request,"Password doesnot match")
+        if first_name=='' or last_name =='' or username=='' or email=='' or password1=='' or password2=='':
+            messages.info(request,"Make sure to fill all the boxes !!")
             return redirect('register')
+        else:
+            if (password1==password2):
+                if User.objects.filter(username=username).exists():
+                    messages.info(request,"Username already taken !!")
+                    return redirect('register')
+                elif User.objects.filter(email=email).exists():
+                    messages.info(request,'Email already in use !!')
+                    return redirect('register')
+                else:
+                                user=User.objects.create_user(username=username,password=password1, email=email,first_name=first_name,last_name=last_name)
+                                user.save()
+                                print('USER CREATED !')
+                                return redirect('login')
+            else:
+                messages.info(request,"Password doesnot match !!")
+                return redirect('register')
     else:
         return render(request,"register.html")
 
@@ -43,7 +47,7 @@ def login(request):
             auth.login(request,user)
             return redirect('/')
         else:
-            messages.info(request,'Invalid Credentials')
+            messages.info(request,'Invalid Credentials !!')
             return redirect('login')
     else:
         return render(request,"login.html")
