@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="{%static 'css/register.css'%}">
 </head>
 <body>
-    <div class="body">
+    <!-- <div class="body"> -->
         <div class="box">
             <h1>New Account? Sign up now !!</h1>
+            <div class="signin">
+                or <a href="/accounts/login"><div class="login">Login</div></a> 
+             </div>
             <div class="form">
                 <form action="register" method="POST">
                     {% csrf_token %}
@@ -46,8 +49,7 @@
                 </div>
             </form>
         </div>
-    </div>
-        <div>
+    <div class="message">
         {%for message in messages%}
         <h3>{{message}}</h3>
         {%endfor%}
