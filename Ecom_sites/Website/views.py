@@ -12,8 +12,8 @@ def hello(request):
 def product(request):
     dests=Destination.objects.all()
     return render(request,"product.html",{'dests':dests})
-def singleProduct(request, name=None):
-    data = Destination.objects.get(name=name)
+def singleProduct(request, num=None):
+    data = Destination.objects.get(num=num)
     return render(request, "product_detail.html",{"data":data})
 
 def payment(request):
