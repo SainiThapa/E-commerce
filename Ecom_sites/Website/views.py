@@ -27,3 +27,8 @@ def buy(request):
     return render(request,"Buy.html")
 def categories(request):
     return render(request,"categories.html")
+
+
+def slider(request):
+    dests=Destination.objects.all()
+    return render(request,"homeslider.html",{'dests':dests})

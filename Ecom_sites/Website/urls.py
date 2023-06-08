@@ -11,5 +11,7 @@ urlpatterns=[
     path('buy',views.buy,name='buy'),
     path('categories',views.categories,name="buy"),
     path('paymentmethod',views.payment,name="payment"),
-    path('product_detail/<num>/',views.singleProduct, name="num")
+    path('product_detail/<num>/',views.singleProduct, name="num"),
+    path('slider',views.slider, name="slider"),
+
 ]

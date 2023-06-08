@@ -1,0 +1,28 @@
+{%load static%}
+{% static "images" as baseUrl%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/slider.css'%}">
+    <script type="text/javascript" src="slider.js"></script>
+</head>
+<body>
+    {%block content%}
+    <h1>
+        CSS Slider Animation
+    </h1>
+    {%for dest in dests%}
+    {%if dest.offer%}
+    <main>
+        <img class="slide" src="{{dest.img.url}}">
+    </main>
+    {%endif%}
+        {%endfor%}
+
+    {%endblock%}
+</body>
+</html>
