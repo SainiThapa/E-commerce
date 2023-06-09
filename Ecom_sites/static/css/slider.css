@@ -1,21 +1,16 @@
-*{
-    box-sizing: border-box;
+body{
+    margin: 0;
+    padding: 0;
+    background: #34495e;
 }
-main{
-    width:50%;
-    height: 500px;
-    margin: auto;
-    margin-top: 100px;
-    box-shadow: 2px 1px 2px 3px grey;
-    overflow: hidden;
-    position: relative;
-    transition: 1s;
+.slidershow{
+ width: 700px;
+ height: 400px;
+ overflow:hidden;   
 }
-.slide{
-    height: 475px;
-    width: auto;
+.middle{
     position: absolute;
-}
-main:hover{
-    transform: translateY(-20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
