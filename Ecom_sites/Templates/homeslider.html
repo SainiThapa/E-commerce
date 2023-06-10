@@ -8,55 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{%static 'css/slider.css'%}">
-    <!-- <script type="text/javascript" src="slider.js"></script> -->
+    <script type="text/javascript" src="slider.js"></script>
 </head>
 <body>
     {%block content%}
     <h1>
         CSS Slider Animation
     </h1>
-    <div class="slidershow middle">
-        <div class="slides">
-            <input type="radio" id="r1">
-            <input type="radio" id="r2">
-            <input type="radio" id="r3">
-            <input type="radio" id="r4">
-            <input type="radio" id="r5">
-            <input type="radio" id="r6">
-            <input type="radio" id="r7">
-            <input type="radio" id="r8">
-            <input type="radio" id="r9">
-            <input type="radio" id="r10">
-            <input type="radio" id="r11">
-            <input type="radio" id="r12">
-
+        <div id="slides" data-mouse-down-at="0" data-prev-percentage="0">
             {%for dest in dests%}
 
             {%if dest.offer%}
                 <div class="slide">
-                    <img class="slide" src="{{dest.img.url}}">
+                    <img class="slide" draggable="false" src="{{dest.img.url}}" >
                 </div>
             {%endif%}
 
             {%endfor%}
         </div>
-        <div class="navigation">
-            <label for="r1" class="bar"></label>
-            <label for="r2" class="bar"></label>
-            <label for="r3" class="bar"></label>
-            <label for="r4" class="bar"></label>
-            <label for="r5" class="bar"></label>
-            <label for="r6" class="bar"></label>
-            <label for="r7" class="bar"></label>
-            <label for="r8" class="bar"></label>
-            <label for="r9" class="bar"></label>
-            <label for="r10" class="bar"></label>
-            <label for="r11" class="bar"></label>
-            <label for="r12" class="bar"></label>
-
-        </div>
-    </div>
-
     {%endblock%}
 </body>
 </html>
