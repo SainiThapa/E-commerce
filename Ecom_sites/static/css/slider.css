@@ -11,7 +11,7 @@ body{
     object-fit: cover;
     object-position: center;
 }
-#slides{
+#image-track{
     display: flex;
     gap:4vmin;
     position:absolute;
