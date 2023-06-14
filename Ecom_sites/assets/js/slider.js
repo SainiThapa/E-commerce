@@ -1,7 +1,12 @@
-const track = document.getElementById("slides")
+const track = document.getElementById('image-track');
 
 window.onmousedown = e => {
-    track.dataset.mouseDownAt = e.clientX;
+    (track.dataset.mouseDownAt = e.clientX);
+}
+
+window.onmouseup = () => {
+    track.dataset.mouseDownAt = "0";
+    track.dataset.prevPercentage = track.dataset.percentage;
 }
 
 window.onmousemove = e => {
@@ -10,8 +15,11 @@ window.onmousemove = e => {
     const mouseDelta =  parseFloat(track.dataset.mouseDownAt) - e.clientX,
         maxDelta = window.innerWidth / 2;
   
-    const percentage=(mouseDelta/maxDelta)*100;
-  
-    track.style.transform = 'translate(${percentage}%, -50%)';
+    const percentage=(mouseDelta/maxDelta) * -100;
+        nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
+    track.style.transform = 'translate(${percentage}%, -50%)'; 
+}
+for(const image of track.getElementsByClassName("slide")){
+    image.style.objectPosition = '${nextPercentage} 50%';
 }
