@@ -13,5 +13,8 @@ urlpatterns=[
     path('paymentmethod',views.payment,name="payment"),
     path('product_detail/<num>/',views.singleProduct, name="num"),
     path('slider',views.slider, name="slider"),
+    path('albums',views.albums, name="albums"),
+
+    path('lightsticks',views.lightstick, name="lightstick"),
 
 ]

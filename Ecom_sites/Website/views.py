@@ -32,3 +32,12 @@ def categories(request):
 def slider(request):
     dests=Destination.objects.all()
     return render(request,"homeslider.html",{'dests':dests})
+
+def albums(request, num=None):
+
+    data=Destination.objects.all()
+    return render(request,"albums.html",{"data":data})
+
+def lightstick(request):
+    data = Destination.objects.all()
+    return render(request,"lightstick.html",{"data":data})
