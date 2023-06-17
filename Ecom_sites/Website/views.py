@@ -41,3 +41,7 @@ def albums(request, num=None):
 def lightstick(request):
     data = Destination.objects.all()
     return render(request,"lightstick.html",{"data":data})
+
+def fashion(request):
+    data = Destination.objects.all()
+    return render(request,"fashion.html",{"data":data})
