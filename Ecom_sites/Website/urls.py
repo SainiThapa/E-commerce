@@ -18,6 +18,7 @@ urlpatterns=[
     path('lightsticks',views.lightstick, name="lightstick"),
 
     path('fashion&merch',views.fashion, name="fashion"),
+    path('mycart/<num>/',views.mycart, name="mycart"),
 
 
 ]

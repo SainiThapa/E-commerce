@@ -1,6 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.http import HttpResponse, JsonResponse
 from .models import Destination
+# from .models import Cartobject
+from django.contrib import messages
+
 
 # Create your views here.
 def home(request):
@@ -34,7 +37,6 @@ def slider(request):
     return render(request,"homeslider.html",{'dests':dests})
 
 def albums(request, num=None):
-
     data=Destination.objects.all()
     return render(request,"albums.html",{"data":data})
 
@@ -45,3 +47,10 @@ def lightstick(request):
 def fashion(request):
     data = Destination.objects.all()
     return render(request,"fashion.html",{"data":data})
+
+
+def mycart(request, num=None):
+    data=Destination.objects.get(num=num)
+    # print("Product number is "+ str(data.num))
+    
+    return render(request,"Mycart.html",{"data":data})

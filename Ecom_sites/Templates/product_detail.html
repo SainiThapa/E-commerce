@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{%static 'css/home.css'%}">
     <link rel="stylesheet" href="{%static 'css/product_detail.css'%}">
     <link rel = "icon" href = "https://i.pinimg.com/originals/41/87/16/4187161da25587f50704458a6a93c9df.jpg" type = "image/x-icon">
-
     <script src="https://kit.fontawesome.com/071ff2c21e.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -50,9 +49,15 @@
                        <a href="/paymentmethod">
                            <div class="buynow">Buy Now
                        </div></a>
-                       <a href="#"><div class="buynow">
-                           Add to cart <i class="fa-solid fa-cart-shopping"></i>
-                       </div></a>
+                       <div class="product_cart">
+                            <a href="/mycart/{{data.num}}" value="{{data.num}}">
+
+                                    <div class="buynow">
+                                        Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                </a>
+                                </button>
+                        </div>
                     </div>
                     {% else %}
                     <div class="buy">
@@ -66,6 +71,8 @@
         </div>
     </div>
 </div>
+<!-- <script src="{%static 'js/script.js'%}"></script> -->
+
     {%endblock%}
 </body>
 </html>
