@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #74d0d5;
+    background-color: rgb(181, 176, 176);
     color: #fff;
 }
 .nav{
@@ -53,4 +53,9 @@ body{
 }
 .myNav ul li a:hover::after{
     width:130px;
+}
+
+.offer{
+    position: absolute;
+    margin-left: 50%;
 }
