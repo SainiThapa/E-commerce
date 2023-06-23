@@ -8,6 +8,8 @@
     <title>Slider</title>
     <link rel="stylesheet" href="{%static 'css/imagecarousel.css'%}">
     <link rel="stylesheet" href="{%static 'css/home.css'%}">
+    <link rel="stylesheet" href="{%static 'css/product.css'%}">
+
 
   </head>
   <body>
@@ -64,6 +66,24 @@
 </div>
 {%endblock%}
 <div class="offer">Special Offer</div>
+
+<div class="services">
+  <div class="container">
+      {%for dest in dests%}
+      {%if dest.offer%}
+      <a target="_parent" href="/product_detail/{{dest.num}}">
+      <div class="gallery">
+          <div name="content">
+                  <img src="{{dest.img.url}}" height="300px">
+                  <div class="description"><b><div class="name">{{dest.name}}</div></b>
+                  Price : NRs.{{dest.price}}<div class="desc">({{dest.desc}})</div>
+              </div>
+          </div>
+          </div></a>
+        {%endif%}
+      {%endfor%}
+  </div>
+</div>
 
 </body>
 <script src="{%static 'js/imagecaro.js'%}"></script>
