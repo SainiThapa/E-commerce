@@ -54,8 +54,3 @@ body{
 .myNav ul li a:hover::after{
     width:130px;
 }
-
-.offer{
-    position: absolute;
-    margin-left: 50%;
-}
