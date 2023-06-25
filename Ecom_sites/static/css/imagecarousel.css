@@ -109,3 +109,13 @@
   color: black;
   font-weight: 600;
 }
+
+.detail_pro{
+  position:relative;
+  float: left;
+  margin: 10px 35%;
+  /* flex-wrap: wrap; */
+  color: black;
+  text-align: center;
+  font-size: 30px;    
+ }

@@ -8,7 +8,9 @@ from django.contrib import messages
 # Create your views here.
 def home(request):
     # return HttpResponse("<h1>Hello World</h1>")
-    return render(request,'index.html')
+    # return render(request,'Slider.html')
+    dests=Destination.objects.all()
+    return render(request,"Slider.html",{'dests':dests})
 
 def hello(request):
     return render(request,"home.html")
