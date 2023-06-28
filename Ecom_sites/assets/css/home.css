@@ -19,6 +19,7 @@ body{
     height: 90px;
     line-height: 60px;
     background-color: #0f8990;
+    margin-bottom: 5px;
 }
 .logo1
 {
@@ -52,5 +53,5 @@ body{
     transition: 0.5s;
 }
 .myNav ul li a:hover::after{
-    width:130px;
+    width:110px;
 }
