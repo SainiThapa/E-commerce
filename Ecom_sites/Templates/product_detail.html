@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{%static 'css/product_detail.css'%}">
     <link rel = "icon" href = "https://i.pinimg.com/originals/41/87/16/4187161da25587f50704458a6a93c9df.jpg" type = "image/x-icon">
     <script src="https://kit.fontawesome.com/071ff2c21e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
     {% block content %}
@@ -30,7 +32,7 @@
                     <li><a href="/accounts/LoginOrSignup">Login/Sign Up</a></li>
                     {% endif %}
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="#">My Cart<i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="#">My Cart<i class="fa-solid fa-cart-shopping"></i>(<span id="cart"></span>)</a></li>
                 </ul>
             </nav>
         </div>
@@ -49,9 +51,8 @@
                        <a href="/paymentmethod">
                            <div class="buynow">Buy Now
                        </div></a>
-                       <div class="product_cart">
-                            <a href="/mycart/{{data.num}}" value="{{data.num}}">
-
+                       <div class="product_cart" id="pr{{data.num}}"    >
+                            <a href="#" value="{{data.num}}">
                                     <div class="buynow">
                                         Add to cart <i class="fa-solid fa-cart-shopping"></i>
                                     </div>
@@ -72,7 +73,37 @@
     </div>
 </div>
 <!-- <script src="{%static 'js/script.js'%}"></script> -->
-
+    
     {%endblock%}
+    {%block js%}    
+    <script>
+
+        if (localStorage.getItem('cart')==null){
+          var cart={};
+        }
+        else{
+            cart=JSON.parse(localStorage.getItem('cart'));
+       
+            document.getElementById('cart').innerHTML = Object.keys(cart).length;
+        }
+    
+        $('.product_cart').click(function(){
+          console.log('clicked');
+          var idstr= this.id.toString();
+          console.log(idstr);
+          if(cart[idstr]!=undefined){
+            cart[idstr]+=1;
+          }
+          else{
+            cart[idstr]=1;
+          }
+          console.log(cart);
+          localStorage.setItem('cart',JSON.stringify(cart)); 
+        });
+        $('#popcart').popover('show');
+        document.getElementById("popcart").setAttribute('data-content','<h5>Cart</h5>');    
+
+      </script>
+      {%endblock%}
 </body>
 </html>
