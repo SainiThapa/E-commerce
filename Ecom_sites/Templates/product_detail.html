@@ -28,11 +28,12 @@
                     <li><a href="/product">Products</a></li>
                     {% if user.is_authenticated %}
                     <li><a href="/accounts/logout">Logout</a></li>
-                    {% else %}
-                    <li><a href="/accounts/LoginOrSignup">Login/Sign Up</a></li>
-                    {% endif %}
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="#">My Cart<i class="fa-solid fa-cart-shopping"></i>(<span id="cart"></span>)</a></li>
+                    {% else %}
+                    <li><a href="/accounts/LoginOrSignup">Login/Sign Up</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </div>
@@ -52,30 +53,31 @@
                            <div class="buynow">Buy Now
                        </div></a>
                        <div class="product_cart" id="pr{{data.num}}"    >
+                        <span id="divpr{{data.num}}">
                             <a href="#" value="{{data.num}}">
                                     <div class="buynow">
                                         Add to cart <i class="fa-solid fa-cart-shopping"></i>
                                     </div>
                                 </a>
-                                </button>
-                        </div>
+                                </span>
+                        </div >
                     </div>
                     {% else %}
                     <div class="buy">
                         <a href="/accounts/LoginOrSignup"><div class="buynow">Buy Now
                         </div></a>
-                        <a href="/accounts/LoginOrSignup"><div class="buynow">
-                            Add to cart <i class="fa-solid fa-cart-shopping"></i>
-                        </div></a>
+                            <a href="/accounts/LoginOrSignup"><div class="buynow">
+                                Add to cart <i class="fa-solid fa-cart-shopping"></i>
+                            </div></a>
                     </div>
                     {% endif %}
         </div>
     </div>
 </div>
-<!-- <script src="{%static 'js/script.js'%}"></script> -->
+<script src="{%static 'js/cart.js'%}"></script>
     
     {%endblock%}
-    {%block js%}    
+    <!-- {%block js%}    
     <script>
 
         if (localStorage.getItem('cart')==null){
@@ -100,10 +102,8 @@
           console.log(cart);
           localStorage.setItem('cart',JSON.stringify(cart)); 
         });
-        $('#popcart').popover('show');
-        document.getElementById("popcart").setAttribute('data-content','<h5>Cart</h5>');    
 
       </script>
-      {%endblock%}
+      {%endblock%} -->
 </body>
 </html>
