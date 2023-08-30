@@ -23,7 +23,7 @@
                     {% if user.is_authenticated %}
                     <li>Hello, {{user.first_name}}</li>
                     {% endif %}
-                    <li><a href="home">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="categories">Categories</a></li>
                     <li><a href="product">Products</a></li>
                     {% if user.is_authenticated %}
@@ -32,7 +32,7 @@
                     <li><a href="accounts/LoginOrSignup">Login/Sign Up</a></li>
                     {% endif %}
                     <li><a href="contact">Contact</a></li>
-                    <li><a href="#">My Cart<i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="cart">My Cart<i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
         </div>

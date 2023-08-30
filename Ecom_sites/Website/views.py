@@ -50,6 +50,9 @@ def fashion(request):
     data = Destination.objects.all()
     return render(request,"fashion.html",{"data":data})
 
+def cart(request):
+    
+    return render(request,"Mycart.html")
 
 def mycart(request, num=None):
     data=Destination.objects.get(num=num)
